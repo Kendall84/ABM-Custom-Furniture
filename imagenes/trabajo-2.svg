@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2f2c"/><stop offset="1" stop-color="#3c7a6e"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<rect x="64" y="250" width="120" height="500" rx="6" fill="#fff" fill-opacity="0.06"/><rect x="208" y="330" width="120" height="500" rx="6" fill="#fff" fill-opacity="0.09"/><rect x="352" y="250" width="120" height="500" rx="6" fill="#fff" fill-opacity="0.12"/><rect x="496" y="330" width="120" height="500" rx="6" fill="#fff" fill-opacity="0.15"/><rect x="640" y="250" width="120" height="500" rx="6" fill="#fff" fill-opacity="0.18"/>
+<text x="400" y="964" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff" fill-opacity=".55">Foto de ejemplo: reemplazar por imagen real</text>
+</svg>
