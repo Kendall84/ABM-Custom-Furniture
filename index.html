@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABM Custom Furniture | Lo mejor para tu negocio y hogar</title>
+  <meta name="description" content="ABM Custom Furniture: trabajos a la medida para tu negocio y hogar. Cotizá por WhatsApp en menos de un minuto.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#14181C">
+  <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#cotizador">Ir al cotizador</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top" aria-label="ABM Custom Furniture, inicio">
+      <img src="imagenes/logo.svg" alt="" width="40" height="40">
+      <span>ABM <b>Custom Furniture</b></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a class="btn btn--small" href="#cotizador">Cotizar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero__img" src="imagenes/hero.svg" alt="Espacio terminado a la medida por ABM Custom Furniture" width="1600" height="900" fetchpriority="high">
+      <div class="hero__veil"></div>
+      <div class="hero__copy">
+        <h1>Lo mejor para tu negocio y hogar.</h1>
+        <p>Diseñamos, fabricamos e instalamos a la medida. Contanos qué necesitás y recibí tu cotización por WhatsApp.</p>
+        <div class="hero__actions">
+          <a class="btn btn--wa" href="#cotizador">Cotizar por WhatsApp</a>
+          <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <h2>Hecho a la medida de tu espacio</h2>
+        <p class="lead">Del hogar al local comercial, cada trabajo se mide, se diseña y se instala por nuestro equipo.</p>
+        <ul class="services">
+          <li>
+            <h3>Cocinas y closets</h3>
+            <p>Diseño funcional, acabados duraderos y aprovechamiento de cada centímetro.</p>
+          </li>
+          <li>
+            <h3>Mobiliario para negocio</h3>
+            <p>Mostradores, estanterías y áreas de atención pensadas para tu operación.</p>
+          </li>
+          <li>
+            <h3>Remodelaciones</h3>
+            <p>Renovamos sala, baños y áreas de trabajo con cronograma claro.</p>
+          </li>
+          <li>
+            <h3>Rótulos y exhibidores</h3>
+            <p>Imagen visible para tu marca, dentro y fuera del local.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="trabajos">
+      <div class="wrap">
+        <h2>Trabajos recientes</h2>
+        <p class="lead">Fotos amplias de proyectos terminados. Reemplazá estas imágenes por las reales.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g g--a"><img src="imagenes/trabajo-1.svg" alt="Cocina integral a la medida" loading="lazy" width="1200" height="800"><figcaption>Cocina integral, hogar</figcaption></figure>
+        <figure class="g g--b"><img src="imagenes/trabajo-2.svg" alt="Mostrador para local comercial" loading="lazy" width="800" height="1000"><figcaption>Mostrador, local comercial</figcaption></figure>
+        <figure class="g g--c"><img src="imagenes/trabajo-3.svg" alt="Closet empotrado" loading="lazy" width="800" height="800"><figcaption>Closet empotrado</figcaption></figure>
+        <figure class="g g--d"><img src="imagenes/trabajo-4.svg" alt="Rótulo luminoso para negocio" loading="lazy" width="1200" height="800"><figcaption>Rótulo para negocio</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="wrap">
+        <h2>Cómo trabajamos</h2>
+        <ol class="steps">
+          <li><b>Nos escribís.</b> Llenás el cotizador y se abre tu chat de WhatsApp con todo listo.</li>
+          <li><b>Medimos y diseñamos.</b> Visitamos el lugar y te presentamos la propuesta.</li>
+          <li><b>Fabricamos e instalamos.</b> Cumplimos la fecha acordada y dejamos todo limpio.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--quote" id="cotizador">
+      <div class="wrap quote">
+        <div class="quote__intro">
+          <h2>Cotizá por WhatsApp</h2>
+          <p class="lead">Respondé unas preguntas. Armamos el mensaje por vos y lo enviás con un toque.</p>
+          <div class="bubble" aria-live="polite">
+            <span class="bubble__label">Así se verá tu mensaje</span>
+            <p id="preview">Completá el formulario y tu mensaje aparece acá.</p>
+          </div>
+        </div>
+
+        <form id="quote-form" class="form" novalidate autocomplete="off">
+          <fieldset>
+            <legend>¿Para qué es?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="tipo" value="Hogar" checked><span>Hogar</span></label>
+              <label class="chip"><input type="radio" name="tipo" value="Negocio"><span>Negocio</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" required>
+              <option value="Cocinas y closets">Cocinas y closets</option>
+              <option value="Mobiliario para negocio">Mobiliario para negocio</option>
+              <option value="Remodelación">Remodelación</option>
+              <option value="Rótulos y exhibidores">Rótulos y exhibidores</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="ancho">Ancho (m)</label>
+              <input id="ancho" name="ancho" type="number" inputmode="decimal" min="0" max="100" step="0.01" placeholder="3.5">
+            </div>
+            <div class="field">
+              <label for="alto">Alto o fondo (m)</label>
+              <input id="alto" name="alto" type="number" inputmode="decimal" min="0" max="100" step="0.01" placeholder="2.4">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ubicacion">Ubicación</label>
+            <input id="ubicacion" name="ubicacion" type="text" maxlength="80" placeholder="Cantón y provincia" required>
+            <small class="err" id="err-ubicacion" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="nombre">Tu nombre</label>
+            <input id="nombre" name="nombre" type="text" maxlength="60" placeholder="Nombre" required>
+            <small class="err" id="err-nombre" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="detalles">Detalles <span class="opt">(opcional)</span></label>
+            <textarea id="detalles" name="detalles" rows="3" maxlength="400" placeholder="Materiales, colores, fecha ideal…"></textarea>
+          </div>
+
+          <button class="btn btn--wa btn--block" type="submit">Enviar por WhatsApp</button>
+          <p class="fine">Se abrirá WhatsApp con tu mensaje listo. No guardamos tus datos en esta página.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <strong>ABM Custom Furniture</strong>
+        <p>Lo mejor para tu negocio y hogar.</p>
+      </div>
+      <a class="foot__wa" id="foot-wa" href="#cotizador" rel="noopener noreferrer">Escribinos por WhatsApp</a>
+    </div>
+    <p class="copy">© <span id="year">2026</span> ABM Custom Furniture. Todos los derechos reservados.</p>
+  </footer>
+
+  <a class="float-wa" id="float-wa" href="#cotizador" rel="noopener noreferrer" aria-label="Cotizar por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 0 1-1.500-5.300C5.600 9.900 10.300 5.300 16 5.300s10.400 4.600 10.400 10.300S21.700 25.800 16 25.800zm5.700-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300.7.300 1.200.5 1.600.6.700.2 1.300.2 1.800.1.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.3-.6-.4z"/></svg>
+    <span>Cotizar</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
