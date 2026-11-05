@@ -1,15 +1,15 @@
-/* ABM Custom Furniture — cotizador por WhatsApp */
+/* ABM Custom Furniture — cotizador por WhatsApp, filtros y lightbox */
 (function () {
   'use strict';
 
-  // ► CAMBIAR: número de WhatsApp con código de país, solo dígitos (Costa Rica = 506).
-  var WHATSAPP_NUMBER = '50600000000';
+  // Número de WhatsApp con código de país (Costa Rica = 506), solo dígitos.
+  var WHATSAPP_NUMBER = '50684906198';
 
+  /* ---------- Cotizador ---------- */
   var form = document.getElementById('quote-form');
   var preview = document.getElementById('preview');
   var EMPTY_TEXT = 'Completá el formulario y tu mensaje aparece acá.';
 
-  // Limpia texto: quita caracteres de control y recorta espacios.
   function clean(value, max) {
     return String(value || '')
       .replace(/[\u0000-\u001F\u007F]/g, ' ')
@@ -37,17 +37,15 @@
   }
 
   function buildMessage(d) {
-    var lines = [];
-    lines.push('Hola ABM Custom Furniture, quiero una cotización.');
-    lines.push('');
+    var lines = ['Hola ABM Custom Furniture, quiero una cotización.', ''];
     if (d.nombre) lines.push('Nombre: ' + d.nombre);
     lines.push('Para: ' + d.tipo);
-    lines.push('Servicio: ' + d.servicio);
+    lines.push('Necesito: ' + d.servicio);
     if (d.ancho || d.alto) {
-      var medidas = [];
-      if (d.ancho) medidas.push(d.ancho + ' m de ancho');
-      if (d.alto) medidas.push(d.alto + ' m de alto o fondo');
-      lines.push('Medidas aproximadas: ' + medidas.join(' x '));
+      var m = [];
+      if (d.ancho) m.push(d.ancho + ' m de ancho');
+      if (d.alto) m.push(d.alto + ' m de alto o fondo');
+      lines.push('Medidas aproximadas: ' + m.join(' x '));
     }
     if (d.ubicacion) lines.push('Ubicación: ' + d.ubicacion);
     if (d.detalles) lines.push('Detalles: ' + d.detalles);
@@ -82,27 +80,89 @@
 
   form.addEventListener('input', updatePreview);
   form.addEventListener('change', updatePreview);
-
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var d = getData();
     if (!validate(d)) {
-      var firstBad = form.querySelector('[aria-invalid="true"]');
-      if (firstBad) firstBad.focus();
+      var bad = form.querySelector('[aria-invalid="true"]');
+      if (bad) bad.focus();
       return;
     }
     window.open(waLink(buildMessage(d)), '_blank', 'noopener,noreferrer');
   });
 
-  // Enlaces generales a WhatsApp (pie de página).
-  var general = waLink('Hola ABM Custom Furniture, quiero información.');
-  ['foot-wa'].forEach(function (id) {
-    var a = document.getElementById(id);
-    if (a) { a.href = general; a.target = '_blank'; }
-  });
+  var footWa = document.getElementById('foot-wa');
+  if (footWa) {
+    footWa.href = waLink('Hola ABM Custom Furniture, quiero información.');
+    footWa.target = '_blank';
+  }
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+
+  /* ---------- Filtros de galería ---------- */
+  var gallery = document.getElementById('gallery');
+  var filters = document.querySelectorAll('.filter');
+  var items = gallery ? Array.prototype.slice.call(gallery.querySelectorAll('li')) : [];
+
+  function applyFilter(name) {
+    items.forEach(function (li) {
+      li.hidden = !(name === 'todo' || li.getAttribute('data-cat') === name);
+    });
+    filters.forEach(function (b) {
+      var on = b.getAttribute('data-filter') === name;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  filters.forEach(function (b) {
+    b.addEventListener('click', function () { applyFilter(b.getAttribute('data-filter')); });
+  });
+
+  // Las tarjetas de servicios llevan a la galería ya filtrada.
+  document.querySelectorAll('[data-go]').forEach(function (a) {
+    a.addEventListener('click', function () { applyFilter(a.getAttribute('data-go')); });
+  });
+
+  /* ---------- Lightbox ---------- */
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-cap');
+  var current = -1;
+
+  function visibleShots() {
+    return items.filter(function (li) { return !li.hidden; })
+      .map(function (li) { return li.querySelector('.shot'); });
+  }
+
+  function show(index) {
+    var shots = visibleShots();
+    if (!shots.length) return;
+    current = (index + shots.length) % shots.length;
+    var s = shots[current];
+    lbImg.src = s.getAttribute('data-full');
+    lbImg.alt = s.querySelector('img').alt;
+    lbCap.textContent = s.getAttribute('data-cap');
+  }
+
+  if (gallery && lb && typeof lb.showModal === 'function') {
+    gallery.addEventListener('click', function (e) {
+      var btn = e.target.closest('.shot');
+      if (!btn) return;
+      var shots = visibleShots();
+      show(shots.indexOf(btn));
+      lb.showModal();
+    });
+    document.getElementById('lb-close').addEventListener('click', function () { lb.close(); });
+    document.getElementById('lb-prev').addEventListener('click', function () { show(current - 1); });
+    document.getElementById('lb-next').addEventListener('click', function () { show(current + 1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+    lb.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+  }
 
   updatePreview();
 })();

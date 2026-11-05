@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ABM Custom Furniture | Lo mejor para tu negocio y hogar</title>
-  <meta name="description" content="ABM Custom Furniture: trabajos a la medida para tu negocio y hogar. Cotizá por WhatsApp en menos de un minuto.">
+  <title>ABM Custom Furniture | Cocinas, closets y muebles a la medida</title>
+  <meta name="description" content="ABM Custom Furniture: cocinas, closets, muebles de TV y muebles para negocio hechos a la medida en Costa Rica. Cotizá por WhatsApp.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#14181C">
+  <meta name="theme-color" content="#0F1012">
   <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,8 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
-      <a href="#trabajos">Trabajos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#antes-despues">Antes y después</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a class="btn btn--small" href="#cotizador">Cotizar</a>
     </nav>
@@ -32,15 +33,18 @@
 
   <main>
     <section class="hero">
-      <img class="hero__img" src="imagenes/hero.svg" alt="Espacio terminado a la medida por ABM Custom Furniture" width="1600" height="900" fetchpriority="high">
-      <div class="hero__veil"></div>
       <div class="hero__copy">
         <h1>Lo mejor para tu negocio y hogar.</h1>
-        <p>Diseñamos, fabricamos e instalamos a la medida. Contanos qué necesitás y recibí tu cotización por WhatsApp.</p>
+        <p>Cocinas, closets y muebles hechos a la medida. Diseñamos, fabricamos e instalamos. Contanos qué necesitás y recibí tu cotización por WhatsApp.</p>
         <div class="hero__actions">
           <a class="btn btn--wa" href="#cotizador">Cotizar por WhatsApp</a>
-          <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
+          <a class="btn btn--ghost" href="#galeria">Ver trabajos</a>
         </div>
+        <p class="hero__note">Valoramos la calidad más que la cantidad.</p>
+      </div>
+      <div class="hero__media">
+        <img class="hero__main" src="imagenes/cocina-azul-petroleo.jpg" alt="Cocina azul petróleo con repisas iluminadas y cubierta de cuarzo" width="512" height="640" fetchpriority="high">
+        <img class="hero__small" src="imagenes/mueble-tv-madera.jpg" alt="Mueble de TV en madera con iluminación" width="480" height="640">
       </div>
     </section>
 
@@ -48,41 +52,78 @@
       <div class="wrap">
         <h2>Hecho a la medida de tu espacio</h2>
         <p class="lead">Del hogar al local comercial, cada trabajo se mide, se diseña y se instala por nuestro equipo.</p>
-        <ul class="services">
+        <ul class="cards">
           <li>
-            <h3>Cocinas y closets</h3>
-            <p>Diseño funcional, acabados duraderos y aprovechamiento de cada centímetro.</p>
+            <a class="card" href="#galeria" data-go="cocinas">
+              <img src="imagenes/cocina-negra-esquina.jpg" alt="Cocina negra en esquina con vitrina" loading="lazy" width="480" height="640">
+              <span class="card__body"><strong>Cocinas</strong><small>Integrales, con isla o en esquina</small></span>
+            </a>
           </li>
           <li>
-            <h3>Mobiliario para negocio</h3>
-            <p>Mostradores, estanterías y áreas de atención pensadas para tu operación.</p>
+            <a class="card" href="#galeria" data-go="closets">
+              <img src="imagenes/closet-blanco-empotrado.jpg" alt="Closet blanco empotrado del piso al techo" loading="lazy" width="480" height="640">
+              <span class="card__body"><strong>Closets y dormitorios</strong><small>Aprovechamos cada centímetro</small></span>
+            </a>
           </li>
           <li>
-            <h3>Remodelaciones</h3>
-            <p>Renovamos sala, baños y áreas de trabajo con cronograma claro.</p>
+            <a class="card" href="#galeria" data-go="salas">
+              <img src="imagenes/mueble-tv-flotante.jpg" alt="Mueble flotante para pantalla empotrada" loading="lazy" width="512" height="640">
+              <span class="card__body"><strong>Salas y muebles de TV</strong><small>Paneles y muebles con luz</small></span>
+            </a>
           </li>
           <li>
-            <h3>Rótulos y exhibidores</h3>
-            <p>Imagen visible para tu marca, dentro y fuera del local.</p>
+            <a class="card" href="#galeria" data-go="banos">
+              <img src="imagenes/mueble-bano-suspendido.jpg" alt="Mueble de baño suspendido con lavatorio" loading="lazy" width="640" height="640">
+              <span class="card__body"><strong>Baños</strong><small>Muebles suspendidos a la medida</small></span>
+            </a>
           </li>
         </ul>
+        <p class="business">¿Tenés un local o salón? También hacemos <b>mobiliario para negocio</b>. <a href="#cotizador">Pedí tu cotización</a>.</p>
       </div>
     </section>
 
-    <section class="section section--dark" id="trabajos">
+    <section class="section section--dark" id="galeria">
       <div class="wrap">
         <h2>Trabajos recientes</h2>
-        <p class="lead">Fotos amplias de proyectos terminados. Reemplazá estas imágenes por las reales.</p>
-      </div>
-      <div class="gallery">
-        <figure class="g g--a"><img src="imagenes/trabajo-1.svg" alt="Cocina integral a la medida" loading="lazy" width="1200" height="800"><figcaption>Cocina integral, hogar</figcaption></figure>
-        <figure class="g g--b"><img src="imagenes/trabajo-2.svg" alt="Mostrador para local comercial" loading="lazy" width="800" height="1000"><figcaption>Mostrador, local comercial</figcaption></figure>
-        <figure class="g g--c"><img src="imagenes/trabajo-3.svg" alt="Closet empotrado" loading="lazy" width="800" height="800"><figcaption>Closet empotrado</figcaption></figure>
-        <figure class="g g--d"><img src="imagenes/trabajo-4.svg" alt="Rótulo luminoso para negocio" loading="lazy" width="1200" height="800"><figcaption>Rótulo para negocio</figcaption></figure>
+        <p class="lead">Proyectos terminados en casas y espacios interiores. Tocá una foto para verla grande.</p>
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button class="filter is-on" type="button" data-filter="todo" aria-pressed="true">Todo</button>
+          <button class="filter" type="button" data-filter="cocinas" aria-pressed="false">Cocinas</button>
+          <button class="filter" type="button" data-filter="closets" aria-pressed="false">Closets y dormitorios</button>
+          <button class="filter" type="button" data-filter="salas" aria-pressed="false">Salas y TV</button>
+          <button class="filter" type="button" data-filter="banos" aria-pressed="false">Baños</button>
+        </div>
+        <ul class="masonry" id="gallery">
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-azul-petroleo-2.jpg" data-cap="Cocina azul petróleo"><img src="imagenes/cocina-azul-petroleo-2.jpg" alt="Cocina azul petróleo con lavaplatos y repisas iluminadas" loading="lazy" width="480" height="640"><span>Cocina azul petróleo</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-negra-moderna.jpg" data-cap="Cocina negra moderna"><img src="imagenes/cocina-negra-moderna.jpg" alt="Cocina negra moderna con piso de madera" loading="lazy" width="480" height="640"><span>Cocina negra moderna</span></button></li>
+          <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/closet-blanco-empotrado.jpg" data-cap="Closet blanco a la medida"><img src="imagenes/closet-blanco-empotrado.jpg" alt="Closet blanco a la medida con gavetas" loading="lazy" width="480" height="640"><span>Closet blanco a la medida</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-isla-repisas.jpg" data-cap="Cocina con isla y repisas flotantes"><img src="imagenes/cocina-isla-repisas.jpg" alt="Cocina con isla, taburetes y repisas flotantes de madera" loading="lazy" width="640" height="640"><span>Isla y repisas flotantes</span></button></li>
+          <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/sala-panel-madera-luz.jpg" data-cap="Panel de madera con iluminación"><img src="imagenes/sala-panel-madera-luz.jpg" alt="Sala con panel de madera e iluminación LED" loading="lazy" width="640" height="640"><span>Panel de madera con luz</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-negra-esquina.jpg" data-cap="Cocina negra en esquina"><img src="imagenes/cocina-negra-esquina.jpg" alt="Cocina negra en esquina con vitrina iluminada" loading="lazy" width="480" height="640"><span>Cocina negra en esquina</span></button></li>
+          <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/cama-flotante.jpg" data-cap="Cama flotante en madera"><img src="imagenes/cama-flotante.jpg" alt="Dormitorio con cama flotante de madera" loading="lazy" width="640" height="640"><span>Cama flotante</span></button></li>
+          <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/mueble-tv-madera.jpg" data-cap="Mueble de TV en madera"><img src="imagenes/mueble-tv-madera.jpg" alt="Mueble de TV en madera con pantalla" loading="lazy" width="480" height="640"><span>Mueble de TV en madera</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-azul-petroleo.jpg" data-cap="Cocina azul petróleo con cuarzo"><img src="imagenes/cocina-azul-petroleo.jpg" alt="Cocina azul petróleo con cubierta de cuarzo" loading="lazy" width="512" height="640"><span>Azul petróleo y cuarzo</span></button></li>
+          <li data-cat="banos"><button class="shot" type="button" data-full="imagenes/mueble-bano-suspendido.jpg" data-cap="Mueble de baño suspendido"><img src="imagenes/mueble-bano-suspendido.jpg" alt="Mueble de baño suspendido con lavatorio" loading="lazy" width="640" height="640"><span>Mueble de baño suspendido</span></button></li>
+          <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/closet-puertas-corredizas.jpg" data-cap="Closet con puertas corredizas"><img src="imagenes/closet-puertas-corredizas.jpg" alt="Closet con puertas corredizas de vidrio gris" loading="lazy" width="512" height="640"><span>Puertas corredizas</span></button></li>
+          <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/mueble-tv-flotante.jpg" data-cap="Mueble flotante para pantalla empotrada"><img src="imagenes/mueble-tv-flotante.jpg" alt="Mueble flotante para pantalla empotrada" loading="lazy" width="512" height="640"><span>Mueble flotante para TV</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-gris-isla.jpg" data-cap="Cocina gris con isla"><img src="imagenes/cocina-gris-isla.jpg" alt="Cocina gris con isla y electrodomésticos empotrados" loading="lazy" width="512" height="640"><span>Cocina gris con isla</span></button></li>
+        </ul>
+        <p class="more">Más proyectos en <a href="https://www.instagram.com/abm.furniture_/" target="_blank" rel="noopener noreferrer">Instagram @abm.furniture_</a></p>
       </div>
     </section>
 
-    <section class="section" id="proceso">
+    <section class="section" id="antes-despues">
+      <div class="wrap">
+        <h2>Antes y después</h2>
+        <p class="lead">Una cocina remodelada de principio a fin.</p>
+        <div class="ba">
+          <figure><img src="imagenes/cocina-antes.jpg" alt="Cocina antes de la remodelación" loading="lazy" width="480" height="640"><figcaption>Antes</figcaption></figure>
+          <figure><img src="imagenes/cocina-blanca-cuarzo.jpg" alt="Cocina blanca con cubierta de cuarzo después de la remodelación" loading="lazy" width="480" height="640"><figcaption>Después</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="proceso">
       <div class="wrap">
         <h2>Cómo trabajamos</h2>
         <ol class="steps">
@@ -114,12 +155,13 @@
           </fieldset>
 
           <div class="field">
-            <label for="servicio">Servicio</label>
+            <label for="servicio">Qué necesitás</label>
             <select id="servicio" name="servicio" required>
-              <option value="Cocinas y closets">Cocinas y closets</option>
+              <option value="Cocina">Cocina</option>
+              <option value="Closet o dormitorio">Closet o dormitorio</option>
+              <option value="Sala o mueble de TV">Sala o mueble de TV</option>
+              <option value="Baño">Baño</option>
               <option value="Mobiliario para negocio">Mobiliario para negocio</option>
-              <option value="Remodelación">Remodelación</option>
-              <option value="Rótulos y exhibidores">Rótulos y exhibidores</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
@@ -165,7 +207,11 @@
         <strong>ABM Custom Furniture</strong>
         <p>Lo mejor para tu negocio y hogar.</p>
       </div>
-      <a class="foot__wa" id="foot-wa" href="#cotizador" rel="noopener noreferrer">Escribinos por WhatsApp</a>
+      <ul class="foot__links">
+        <li><a id="foot-wa" href="#cotizador" rel="noopener noreferrer">WhatsApp 8490-6198</a></li>
+        <li><a href="https://www.instagram.com/abm.furniture_/" target="_blank" rel="noopener noreferrer">Instagram @abm.furniture_</a></li>
+        <li><a href="mailto:abmfurniture22@gmail.com">abmfurniture22@gmail.com</a></li>
+      </ul>
     </div>
     <p class="copy">© <span id="year">2026</span> ABM Custom Furniture. Todos los derechos reservados.</p>
   </footer>
@@ -174,6 +220,16 @@
     <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 0 1-1.500-5.300C5.600 9.900 10.300 5.300 16 5.300s10.400 4.600 10.400 10.300S21.700 25.800 16 25.800zm5.700-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300.7.300 1.200.5 1.600.6.700.2 1.300.2 1.800.1.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.3-.6-.4z"/></svg>
     <span>Cotizar</span>
   </a>
+
+  <dialog class="lb" id="lb" aria-label="Foto ampliada">
+    <button class="lb__close" type="button" id="lb-close" aria-label="Cerrar">×</button>
+    <button class="lb__nav lb__nav--prev" type="button" id="lb-prev" aria-label="Foto anterior">‹</button>
+    <figure class="lb__fig">
+      <img id="lb-img" src="" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb__nav lb__nav--next" type="button" id="lb-next" aria-label="Foto siguiente">›</button>
+  </dialog>
 
   <script src="script.js"></script>
 </body>
