@@ -125,33 +125,35 @@
     a.addEventListener('click', function () { applyFilter(a.getAttribute('data-go')); });
   });
 
-  /* ---------- Lightbox ---------- */
+  /* ---------- Lightbox (galería y proyectos) ---------- */
   var lb = document.getElementById('lb');
   var lbImg = document.getElementById('lb-img');
   var lbCap = document.getElementById('lb-cap');
+  var group = [];
   var current = -1;
 
-  function visibleShots() {
-    return items.filter(function (li) { return !li.hidden; })
-      .map(function (li) { return li.querySelector('.shot'); });
+  function shotsIn(container) {
+    return Array.prototype.slice.call(container.querySelectorAll('.shot')).filter(function (b) {
+      var li = b.closest('li');
+      return !(li && li.hidden);
+    });
   }
 
   function show(index) {
-    var shots = visibleShots();
-    if (!shots.length) return;
-    current = (index + shots.length) % shots.length;
-    var s = shots[current];
+    if (!group.length) return;
+    current = (index + group.length) % group.length;
+    var s = group[current];
     lbImg.src = s.getAttribute('data-full');
     lbImg.alt = s.querySelector('img').alt;
     lbCap.textContent = s.getAttribute('data-cap');
   }
 
-  if (gallery && lb && typeof lb.showModal === 'function') {
-    gallery.addEventListener('click', function (e) {
-      var btn = e.target.closest('.shot');
+  if (lb && typeof lb.showModal === 'function') {
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-lb] .shot');
       if (!btn) return;
-      var shots = visibleShots();
-      show(shots.indexOf(btn));
+      group = shotsIn(btn.closest('[data-lb]'));
+      show(group.indexOf(btn));
       lb.showModal();
     });
     document.getElementById('lb-close').addEventListener('click', function () { lb.close(); });
@@ -162,6 +164,24 @@
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
     });
+  }
+
+  /* ---------- Video de proyectos: se reproduce solo cuando está a la vista ---------- */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) {
+          v.preload = 'auto';
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.case__video video').forEach(function (v) { io.observe(v); });
   }
 
   updatePreview();

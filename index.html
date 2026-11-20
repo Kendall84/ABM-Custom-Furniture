@@ -25,6 +25,7 @@
     <nav class="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
       <a href="#galeria">Galería</a>
+      <a href="#proyectos">Proyectos</a>
       <a href="#antes-despues">Antes y después</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a class="btn btn--small" href="#cotizador">Cotizar</a>
@@ -45,6 +46,32 @@
       <div class="hero__media">
         <img class="hero__main" src="imagenes/cocina-azul-petroleo.jpg" alt="Cocina azul petróleo con repisas iluminadas y cubierta de cuarzo" width="512" height="640" fetchpriority="high">
         <img class="hero__small" src="imagenes/mueble-tv-madera.jpg" alt="Mueble de TV en madera con iluminación" width="480" height="640">
+      </div>
+    </section>
+
+    <section class="brands" id="marcas" aria-labelledby="marcas-titulo">
+      <h2 class="brands__title" id="marcas-titulo">Marcas que confían en nosotros</h2>
+      <div class="marquee">
+        <ul class="marquee__track">
+          <li><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="Nova Cinemas" width="916" height="160" loading="lazy"></li>
+          <li><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="Fresh Dental" width="451" height="160" loading="lazy"></li>
+          <li><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="CONCASA" width="1022" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="" width="916" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="" width="451" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="" width="1022" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="" width="916" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="" width="451" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="" width="1022" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="" width="916" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="" width="451" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="" width="1022" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="" width="916" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="" width="451" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="" width="1022" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--nova" src="imagenes/logos/nova.png" alt="" width="916" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--fresh-dental" src="imagenes/logos/fresh-dental.png" alt="" width="451" height="160" loading="lazy"></li>
+          <li aria-hidden="true"><img class="logo logo--concasa" src="imagenes/logos/concasa.png" alt="" width="1022" height="160" loading="lazy"></li>
+        </ul>
       </div>
     </section>
 
@@ -77,23 +104,32 @@
               <span class="card__body"><strong>Baños</strong><small>Muebles suspendidos a la medida</small></span>
             </a>
           </li>
+          <li>
+            <a class="card" href="#galeria" data-go="negocios">
+              <img src="imagenes/fresh-dental-recepcion.jpg" alt="Recepción a la medida para clínica dental" loading="lazy" width="640" height="640">
+              <span class="card__body"><strong>Negocios</strong><small>Recepciones, barras y mobiliario comercial</small></span>
+            </a>
+          </li>
         </ul>
-        <p class="business">¿Tenés un local o salón? También hacemos <b>mobiliario para negocio</b>. <a href="#cotizador">Pedí tu cotización</a>.</p>
+        <p class="business">¿Tenés un local, clínica o cine? Mirá nuestros <a href="#proyectos">proyectos para negocio</a> o <a href="#cotizador">pedí tu cotización</a>.</p>
       </div>
     </section>
 
     <section class="section section--dark" id="galeria">
       <div class="wrap">
         <h2>Trabajos recientes</h2>
-        <p class="lead">Proyectos terminados en casas y espacios interiores. Tocá una foto para verla grande.</p>
+        <p class="lead">Proyectos terminados en casas, locales y clínicas. Tocá una foto para verla grande.</p>
         <div class="filters" role="group" aria-label="Filtrar por categoría">
           <button class="filter is-on" type="button" data-filter="todo" aria-pressed="true">Todo</button>
           <button class="filter" type="button" data-filter="cocinas" aria-pressed="false">Cocinas</button>
           <button class="filter" type="button" data-filter="closets" aria-pressed="false">Closets y dormitorios</button>
           <button class="filter" type="button" data-filter="salas" aria-pressed="false">Salas y TV</button>
           <button class="filter" type="button" data-filter="banos" aria-pressed="false">Baños</button>
+          <button class="filter" type="button" data-filter="negocios" aria-pressed="false">Negocios</button>
         </div>
-        <ul class="masonry" id="gallery">
+        <ul class="masonry" id="gallery" data-lb>
+          <li data-cat="negocios"><button class="shot" type="button" data-full="imagenes/nova-confiteria-terminada.jpg" data-cap="Barra de confitería, Nova Cinemas"><img src="imagenes/nova-confiteria-terminada.jpg" alt="Barra de confitería terminada en Nova Cinemas" loading="lazy" width="1440" height="810"><span>Confitería Nova Cinemas</span></button></li>
+          <li data-cat="negocios"><button class="shot" type="button" data-full="imagenes/fresh-dental-recepcion.jpg" data-cap="Recepción, clínica Fresh Dental"><img src="imagenes/fresh-dental-recepcion.jpg" alt="Recepción verde con sobre de madera en clínica dental" loading="lazy" width="1440" height="1440"><span>Recepción Fresh Dental</span></button></li>
           <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-azul-petroleo-2.jpg" data-cap="Cocina azul petróleo"><img src="imagenes/cocina-azul-petroleo-2.jpg" alt="Cocina azul petróleo con lavaplatos y repisas iluminadas" loading="lazy" width="480" height="640"><span>Cocina azul petróleo</span></button></li>
           <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-negra-moderna.jpg" data-cap="Cocina negra moderna"><img src="imagenes/cocina-negra-moderna.jpg" alt="Cocina negra moderna con piso de madera" loading="lazy" width="480" height="640"><span>Cocina negra moderna</span></button></li>
           <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/closet-blanco-empotrado.jpg" data-cap="Closet blanco a la medida"><img src="imagenes/closet-blanco-empotrado.jpg" alt="Closet blanco a la medida con gavetas" loading="lazy" width="480" height="640"><span>Closet blanco a la medida</span></button></li>
@@ -101,9 +137,11 @@
           <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/sala-panel-madera-luz.jpg" data-cap="Panel de madera con iluminación"><img src="imagenes/sala-panel-madera-luz.jpg" alt="Sala con panel de madera e iluminación LED" loading="lazy" width="640" height="640"><span>Panel de madera con luz</span></button></li>
           <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-negra-esquina.jpg" data-cap="Cocina negra en esquina"><img src="imagenes/cocina-negra-esquina.jpg" alt="Cocina negra en esquina con vitrina iluminada" loading="lazy" width="480" height="640"><span>Cocina negra en esquina</span></button></li>
           <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/cama-flotante.jpg" data-cap="Cama flotante en madera"><img src="imagenes/cama-flotante.jpg" alt="Dormitorio con cama flotante de madera" loading="lazy" width="640" height="640"><span>Cama flotante</span></button></li>
+          <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-blanca-cuarzo-2.jpg" data-cap="Cocina blanca con cuarzo"><img src="imagenes/cocina-blanca-cuarzo-2.jpg" alt="Cocina blanca con cubierta de cuarzo y refrigeradora de acero" loading="lazy" width="1080" height="1440"><span>Cocina blanca con cuarzo</span></button></li>
           <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/mueble-tv-madera.jpg" data-cap="Mueble de TV en madera"><img src="imagenes/mueble-tv-madera.jpg" alt="Mueble de TV en madera con pantalla" loading="lazy" width="480" height="640"><span>Mueble de TV en madera</span></button></li>
           <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-azul-petroleo.jpg" data-cap="Cocina azul petróleo con cuarzo"><img src="imagenes/cocina-azul-petroleo.jpg" alt="Cocina azul petróleo con cubierta de cuarzo" loading="lazy" width="512" height="640"><span>Azul petróleo y cuarzo</span></button></li>
           <li data-cat="banos"><button class="shot" type="button" data-full="imagenes/mueble-bano-suspendido.jpg" data-cap="Mueble de baño suspendido"><img src="imagenes/mueble-bano-suspendido.jpg" alt="Mueble de baño suspendido con lavatorio" loading="lazy" width="640" height="640"><span>Mueble de baño suspendido</span></button></li>
+          <li data-cat="negocios"><button class="shot" type="button" data-full="imagenes/fresh-dental-sala-espera.jpg" data-cap="Mueble de sala de espera, Fresh Dental"><img src="imagenes/fresh-dental-sala-espera.jpg" alt="Mueble verde con sobre de madera en sala de espera" loading="lazy" width="1280" height="1280"><span>Sala de espera Fresh Dental</span></button></li>
           <li data-cat="closets"><button class="shot" type="button" data-full="imagenes/closet-puertas-corredizas.jpg" data-cap="Closet con puertas corredizas"><img src="imagenes/closet-puertas-corredizas.jpg" alt="Closet con puertas corredizas de vidrio gris" loading="lazy" width="512" height="640"><span>Puertas corredizas</span></button></li>
           <li data-cat="salas"><button class="shot" type="button" data-full="imagenes/mueble-tv-flotante.jpg" data-cap="Mueble flotante para pantalla empotrada"><img src="imagenes/mueble-tv-flotante.jpg" alt="Mueble flotante para pantalla empotrada" loading="lazy" width="512" height="640"><span>Mueble flotante para TV</span></button></li>
           <li data-cat="cocinas"><button class="shot" type="button" data-full="imagenes/cocina-gris-isla.jpg" data-cap="Cocina gris con isla"><img src="imagenes/cocina-gris-isla.jpg" alt="Cocina gris con isla y electrodomésticos empotrados" loading="lazy" width="512" height="640"><span>Cocina gris con isla</span></button></li>
@@ -112,13 +150,59 @@
       </div>
     </section>
 
+    <section class="section section--soft" id="proyectos">
+      <div class="wrap">
+        <h2>Proyectos para negocio</h2>
+        <p class="lead">Diseñamos, fabricamos e instalamos mobiliario comercial a la medida. Tocá una foto para verla grande.</p>
+
+        <article class="case" data-lb>
+          <header class="case__head">
+            <span class="case__tag">Cine</span>
+            <h3>Barra de confitería, Nova Cinemas</h3>
+            <p>Barra de atención de gran formato con cajas numeradas, vitrina y acabado gris grafito. Así avanzó la instalación hasta la entrega.</p>
+          </header>
+          <div class="case__hero">
+            <button class="shot" type="button" data-full="imagenes/nova-confiteria-terminada.jpg" data-cap="Nova Cinemas: barra terminada"><img src="imagenes/nova-confiteria-terminada.jpg" alt="Barra de confitería terminada en Nova Cinemas" loading="lazy" width="1440" height="810"><span>Terminada</span></button>
+          </div>
+          <ol class="case__steps">
+            <li><button class="shot" type="button" data-full="imagenes/nova-confiteria-estructura.jpg" data-cap="Nova Cinemas, paso 1: estructura"><img src="imagenes/nova-confiteria-estructura.jpg" alt="Estructura de la barra durante la instalación" loading="lazy" width="1080" height="1440"><span><b>1</b> Estructura</span></button></li>
+            <li><button class="shot" type="button" data-full="imagenes/nova-confiteria-instalacion.jpg" data-cap="Nova Cinemas, paso 2: instalación"><img src="imagenes/nova-confiteria-instalacion.jpg" alt="Equipo instalando el frente de la barra de confitería" loading="lazy" width="1440" height="1440"><span><b>2</b> Instalación</span></button></li>
+            <li><button class="shot" type="button" data-full="imagenes/nova-confiteria-acabados.jpg" data-cap="Nova Cinemas, paso 3: acabados"><img src="imagenes/nova-confiteria-acabados.jpg" alt="Barra con equipos instalados, en etapa de acabados" loading="lazy" width="1440" height="1440"><span><b>3</b> Acabados</span></button></li>
+          </ol>
+        </article>
+
+        <article class="case" data-lb>
+          <header class="case__head">
+            <span class="case__tag">Clínica</span>
+            <h3>Clínica Fresh Dental</h3>
+            <p>Recepción, mueble de sala de espera y cocineta en verde con sobres de madera, combinados con la identidad de la clínica.</p>
+          </header>
+          <div class="case__grid">
+            <button class="shot case__big" type="button" data-full="imagenes/fresh-dental-recepcion.jpg" data-cap="Fresh Dental: recepción"><img src="imagenes/fresh-dental-recepcion.jpg" alt="Recepción verde con sobre de madera" loading="lazy" width="1440" height="1440"><span>Recepción</span></button>
+            <button class="shot" type="button" data-full="imagenes/fresh-dental-recepcion-2.jpg" data-cap="Fresh Dental: recepción, vista lateral"><img src="imagenes/fresh-dental-recepcion-2.jpg" alt="Recepción en L con jardinera integrada" loading="lazy" width="1280" height="1280"><span>Recepción en L</span></button>
+            <button class="shot" type="button" data-full="imagenes/fresh-dental-sala-espera.jpg" data-cap="Fresh Dental: sala de espera"><img src="imagenes/fresh-dental-sala-espera.jpg" alt="Mueble verde de sala de espera con sobre de madera" loading="lazy" width="1280" height="1280"><span>Sala de espera</span></button>
+            <button class="shot" type="button" data-full="imagenes/fresh-dental-cocineta.jpg" data-cap="Fresh Dental: cocineta"><img src="imagenes/fresh-dental-cocineta.jpg" alt="Cocineta verde con repisa iluminada" loading="lazy" width="960" height="1280"><span>Cocineta</span></button>
+            <figure class="case__video case__tall">
+              <video src="imagenes/fresh-dental-cocineta.mp4" poster="imagenes/fresh-dental-cocineta-poster.jpg" width="480" height="640" muted loop playsinline controls preload="none" aria-label="Video de la cocineta de Fresh Dental"></video>
+              <figcaption>Video de la cocineta</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="antes-despues">
       <div class="wrap">
         <h2>Antes y después</h2>
-        <p class="lead">Una cocina remodelada de principio a fin.</p>
+        <p class="lead">Cocinas remodeladas de principio a fin.</p>
         <div class="ba">
           <figure><img src="imagenes/cocina-antes.jpg" alt="Cocina antes de la remodelación" loading="lazy" width="480" height="640"><figcaption>Antes</figcaption></figure>
           <figure><img src="imagenes/cocina-blanca-cuarzo.jpg" alt="Cocina blanca con cubierta de cuarzo después de la remodelación" loading="lazy" width="480" height="640"><figcaption>Después</figcaption></figure>
+        </div>
+        <h3 class="ba__title">Del granito café al blanco con cuarzo</h3>
+        <div class="ba">
+          <figure><img src="imagenes/cocina-granito-antes.jpg" alt="Cocina con sobre de granito café antes de la remodelación" loading="lazy" width="875" height="650"><figcaption>Antes</figcaption></figure>
+          <figure><img src="imagenes/cocina-blanca-cuarzo-2.jpg" alt="Cocina blanca con cubierta de cuarzo después de la remodelación" loading="lazy" width="1080" height="1440"><figcaption>Después</figcaption></figure>
         </div>
       </div>
     </section>

@@ -67,7 +67,7 @@ button { font-family: inherit; }
 .lead { margin-top: 1rem; max-width: 52ch; color: var(--ink-2); font-size: 1.15rem; }
 
 /* Tarjetas de servicios */
-.cards { margin-top: 2.6rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.cards { margin-top: 2.6rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 16px; }
 .card { display: block; position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4; background: var(--ink); text-decoration: none; color: #fff; }
 .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .card:hover img { transform: scale(1.05); }
@@ -76,6 +76,20 @@ button { font-family: inherit; }
 .card small { color: rgba(255,255,255,.8); font-size: .92rem; }
 .business { margin-top: 2rem; color: var(--ink-2); }
 .business a { color: var(--ink); font-weight: 600; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px; }
+
+/* Marcas que confían en nosotros */
+.brands { background: var(--ink); color: #fff; padding: 8px 0 44px; border-top: 1px solid rgba(255,255,255,.08); }
+.brands__title { font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); text-align: center; padding-top: 32px; }
+.marquee { margin-top: 26px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.marquee__track { display: flex; align-items: center; width: max-content; animation: marquee 38s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track li { flex: none; display: flex; align-items: center; justify-content: center; height: 64px; padding: 0 clamp(32px, 5vw, 64px); }
+.logo { width: auto; opacity: .78; transition: opacity .2s; }
+.logo:hover { opacity: 1; }
+.logo--nova { height: 30px; }
+.logo--concasa { height: 28px; }
+.logo--fresh-dental { height: 54px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* Galería con filtros */
 .filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 2.2rem 0 1.6rem; }
@@ -94,12 +108,39 @@ button { font-family: inherit; }
 .more { margin-top: 1.6rem; color: rgba(255,255,255,.7); }
 .more a { color: #fff; font-weight: 600; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px; }
 
+/* Proyectos para negocio */
+.case { margin-top: 3rem; padding-top: 2.4rem; border-top: 1px solid var(--line); }
+.case__head { max-width: 640px; }
+.case__tag { display: inline-block; background: var(--ink); color: var(--gold); font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; }
+.case h3 { margin-top: .8rem; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; }
+.case__head p { margin-top: .6rem; color: var(--ink-2); }
+.case .shot { background: var(--ink); }
+.case .shot img { width: 100%; height: 100%; object-fit: cover; }
+.case .shot span { opacity: 1; }
+.case .shot span b { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-right: 6px; border-radius: 50%; background: var(--gold); color: var(--ink); font-size: .8rem; }
+.case__hero { margin-top: 1.6rem; }
+.case__hero .shot { aspect-ratio: 16/9; }
+.case__steps { margin-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.case__steps .shot { aspect-ratio: 4/3; }
+.case__grid { margin-top: 1.6rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; grid-template-rows: repeat(2, clamp(150px, 17vw, 200px)); gap: 12px; }
+.case__grid > * { min-height: 0; }
+.case__grid > :nth-child(2) { grid-column: 2; grid-row: 1; }
+.case__grid > :nth-child(3) { grid-column: 2; grid-row: 2; }
+.case__grid > :nth-child(4) { grid-column: 3; grid-row: 1 / span 2; }
+.case__grid > :nth-child(5) { grid-column: 4; grid-row: 1 / span 2; }
+.case__big { grid-column: 1; grid-row: 1 / span 2; }
+.case__tall { grid-row: 1 / span 2; }
+.case__video { margin: 0; position: relative; border-radius: 6px; overflow: hidden; background: var(--ink); }
+.case__video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.case__video figcaption { position: absolute; left: 10px; top: 10px; background: var(--gold); color: var(--ink); font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 999px; pointer-events: none; }
+
 /* Antes y después */
 .ba { margin-top: 2.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 760px; }
 .ba figure { margin: 0; position: relative; border-radius: 6px; overflow: hidden; }
 .ba img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
 .ba figcaption { position: absolute; left: 12px; top: 12px; background: var(--ink); color: #fff; font-weight: 600; font-size: .9rem; padding: 4px 12px; border-radius: 999px; }
 .ba figure:last-child figcaption { background: var(--gold); color: var(--ink); }
+.ba__title { margin-top: 3rem; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; }
 
 /* Proceso */
 .steps { counter-reset: s; margin-top: 2.6rem; max-width: 760px; }
@@ -172,6 +213,10 @@ textarea { resize: vertical; }
   .lb__nav { position: fixed; top: 50%; z-index: 2; }
   .lb__nav--prev { left: 8px; }
   .lb__nav--next { right: 8px; }
+  .case__grid { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+  .case__grid > :nth-child(n) { grid-column: auto; grid-row: auto; aspect-ratio: 1; }
+  .case__grid > .case__big { grid-column: 1 / -1; aspect-ratio: 4/3; }
+  .case__grid > .case__tall { aspect-ratio: 3/4; }
 }
 @media (max-width: 480px) {
   .row { grid-template-columns: 1fr; }
@@ -179,9 +224,16 @@ textarea { resize: vertical; }
   .float-wa { padding: 14px; }
   .masonry { columns: 2 140px; column-gap: 10px; }
   .masonry li { margin-bottom: 10px; }
+  .case__steps { gap: 8px; }
+  .case__steps .shot { aspect-ratio: 3/4; }
+  .case .shot span { font-size: .82rem; padding: 28px 10px 8px; }
+  .ba { gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero__copy { animation: none; }
   .card img, .shot img { transition: none; }
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .marquee__track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 12px; }
+  .marquee__track li[aria-hidden="true"] { display: none; }
 }
